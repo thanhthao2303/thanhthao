@@ -142,7 +142,7 @@
             display: flex;
             margin: 20px 0;
             font-size: 16px;
-            color: #333;
+            color: #000;
         }
 
         .employee-detail-container .detail-item strong {
@@ -239,7 +239,7 @@
                     <strong>Ngày bắt đầu:</strong><span>{{ \Carbon\Carbon::parse($employee->ngayBatDauLamViec)->format('d - m - Y') }}</span>
                 </div>
                 <div class="detail-item">
-                    <strong>Mức lương:</strong><span>{{ number_format($employee->mucLuong, 0, ',', '.') }}/tháng</span>
+                    <strong>Mức lương:</strong><span>{{ number_format($employee->mucLuong, 0, ',', '.') }} /tháng</span>
                 </div>
                 <div class="detail-item rating">
                     <strong>Đánh giá:</strong><span>{{ $employee->danhGia }}</span>

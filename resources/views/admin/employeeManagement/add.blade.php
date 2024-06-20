@@ -148,7 +148,7 @@
         }
 
         .employee-form-container .form-item label {
-            color: #555;
+            color: #000;
             margin-bottom: 5px;
         }
 
@@ -190,6 +190,7 @@
         .employee-form-container .form-buttons .btn-save {
             background-color: #297abf;
             color: white;
+            border-radius: 1px solid black;
         }
 
         .employee-form-container .form-buttons .btn-save:hover {
@@ -319,8 +320,8 @@
                         @enderror
                     </div>
                     <div class="form-buttons">
-                        <button type="submit" class="btn-save">Thêm</button>
-                        <a href="{{ route('employees.index') }}" class="btn-back">Quay lại</a>
+                        <button type="submit" class="btn-save" style="width:95px ">Thêm</button>
+                        <a href="{{ route('employees.index') }}" class="btn-back"  style="border: 1px solid #888888">Quay lại</a>
                     </div>
                 </form>
             </div>

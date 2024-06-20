@@ -89,7 +89,7 @@ class EmployeeController extends Controller
         Employee::create($request->all());
 
         // Chuyển hướng về danh sách nhân viên với thông báo thành công
-        return redirect()->route('employees.index')->with('success', 'Nhân viên đã được thêm thành công.');
+        return redirect()->route('employees.index')->with('success', 'Thêm thông tin nhân viên thành công.');
     }
 
     /**
@@ -133,7 +133,7 @@ class EmployeeController extends Controller
     {
         $employee = Employee::find($id);
         if (!$employee) {
-            return redirect()->route('employees.index')->with('error', 'Thêm thông tin nhân viên thành công');
+            return redirect()->route('employees.index')->with('error', 'Sửa thông tin nhân viên thất bại.');
         }
     
         $request->validate([
@@ -164,7 +164,7 @@ class EmployeeController extends Controller
 
     
         $employee->update($request->all());
-        return redirect()->route('employees.edit', $employee->id)->with('success', 'Sửa thông tin nhân viên thành công');
+        return redirect()->route('employees.edit', $employee->id)->with('success', 'Sửa thông tin nhân viên thành công.');
     }
 
     /**
